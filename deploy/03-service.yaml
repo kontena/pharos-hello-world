@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: hello-world
+  name: hello
+spec:
+  selector:
+    app: hello
+  ports:
+  - port: 9292
+    targetPort: 9292

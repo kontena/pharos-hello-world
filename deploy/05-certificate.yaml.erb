@@ -1,0 +1,18 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  namespace: hello-world
+  name: hello
+spec:
+  secretName: hello-tls
+  issuerRef:
+    name: letsencrypt
+  commonName: <%= var.host %>
+  dnsNames:
+  - <%= var.host %>
+  acme:
+    config:
+    - http01:
+        ingressClass: nginx
+      domains:
+      - <%= var.host %>
