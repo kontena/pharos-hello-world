@@ -12,7 +12,7 @@
 ## Deployment
 
 ```sh
-$ mortar --var host=hello.mydomain.com hello deploy/
+$ mortar --var host=hello.mydomain.com --var email=me@domain.com hello deploy/
 ```
 
 where `hello.mydomain.com` is a DNS name that points to the hello-world app. Note: you need to configure this outside of Kontena Pharos.
