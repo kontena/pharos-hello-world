@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: hello
+  namespace: hello-world
+spec:
+  limits:
+  - default:
+      memory: 64Mi
+      cpu: 200m
+    defaultRequest:
+      memory: 32Mi
+      cpu: 100m
+    type: Container
